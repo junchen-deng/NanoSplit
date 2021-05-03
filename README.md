@@ -24,7 +24,7 @@ optional arguments:
                         the minimum length of the sub-reads (default: 500)
 ```
 
-## examples
+## Examples
 ```
 NanoSplit all_barcode3_reads.fastq
 NanoSplit.py -w 150 -q 20 -l 1000 all_barcode3_reads.fastq
