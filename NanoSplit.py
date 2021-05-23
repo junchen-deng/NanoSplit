@@ -62,7 +62,7 @@ for nano_read in fastq_list:
         ## export the region of high quality -- split at idx_range[0]
         if idx_range[0] < idx_range[1]:
             if idx_range[0] - range_start >= min_length:    # filter out short reads
-                print(nano_read[0], "range: {}-{}".format(range_start, idx_range[0]), file=OUTPUT)
+                print(nano_read[0].split(' ')[0] + "_{}_{}".format(range_start, idx_range[0]), file=OUTPUT)
                 print(nano_read[1][range_start:idx_range[0]+1], file=OUTPUT)
                 print("+", file=OUTPUT)
                 print(nano_read[3][range_start:idx_range[0]+1], file=OUTPUT)
